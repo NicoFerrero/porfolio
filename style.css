@@ -1,0 +1,577 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.shadowed {
+  background: #fff;
+  box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.2);
+  height: 13vh;
+}
+
+.on-white {
+  color: #4f1d21 !important;
+}
+
+.on-white-burger {
+  background-color: #4f1d21 !important;
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 70em;
+}
+
+/*NAVIGATION START*/
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+  height: 10vh;
+  transition: all 0.2s ease-in-out;
+}
+
+/*.logo {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 20px;
+}*/
+
+.logo {
+  width: 68px;
+  height: 68px;
+  background: url(./images/UntitledDesign.png);
+  background-size: 68px 68px;
+  margin-top: 1em;
+  transition: all 0.3s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.08) rotate(-15deg) translate(0, 0) skew(0deg, 0deg);
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+}
+
+.nav-links li {
+  list-style: none;
+  padding-bottom: 0.5em;
+  transition: border 0.3s ease-in-out;
+  border-bottom: 3px solid transparent;
+  color: #fff;
+}
+
+.nav-links li:hover {
+  border-bottom: 3px solid #fff;
+}
+
+.nav-links li.on-white:hover {
+  border-bottom: 3px solid #4f1d21;
+}
+
+a {
+  /*color: rgb(226, 226, 226);*/
+  color: inherit;
+  text-decoration: none;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+}
+
+.burger {
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(226, 226, 226);
+  margin: 5px;
+  transition: all 0.5s ease;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-links {
+    width: 55%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .nav-links {
+    position: absolute;
+    right: 0px;
+    top: 0;
+    height: 100vh;
+    background-color: #4f1d21;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+  }
+
+  a {
+    /*color: #fff;*/
+    color: inherit;
+  }
+
+  .nav-links li {
+    /*opacity: 0;*/
+    color: #fff;
+    border-bottom: none;
+  }
+  .nav-links li:hover {
+    border-bottom: none;
+  }
+
+  .burger {
+    display: block;
+  }
+}
+
+.nav-active {
+  transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-5px, 6px);
+  background-color: #fff !important;
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-5px, -6px);
+  background-color: #fff !important;
+}
+/*NAVIGATION END*/
+
+/*HOME START*/
+#home {
+  background: url(./images/grayscale-photo-of-computer-laptop-near-white-notebook-and-169573.jpg)
+    no-repeat center center/cover;
+  background-color: #d24d57;
+  background-blend-mode: multiply;
+  padding: 10em 0;
+  color: #fff;
+  text-align: center;
+  transition: padding 0.2s linear;
+  position: relative;
+}
+
+#home h1 {
+  font-size: 2.7em;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  padding: 0 1em;
+  transition: all 0.4s ease-in-out;
+}
+
+#home h2 {
+  padding: 0 1em;
+  font-size: 1.5em;
+  line-height: 1.30769em;
+  transition: all 0.4s ease-in-out;
+}
+
+.button {
+  text-transform: uppercase;
+  border: 2px solid transparent;
+  display: block;
+  text-align: center;
+  border-radius: 0.25em;
+  text-decoration: none;
+}
+
+#home .check-work {
+  border-color: #fff;
+  margin: 3.75em auto 0 auto;
+  font-size: 1em;
+  padding: 1.5em 0;
+  width: 30%;
+  transition: all 0.4s ease-in-out;
+}
+
+#home .check-work:hover {
+  background: #fff;
+  color: #d24d57;
+}
+
+@media screen and (max-width: 768px) {
+  #home h1 {
+    font-size: 1.3em;
+    margin-bottom: 1em;
+  }
+
+  #home h2 {
+    font-size: 1em;
+  }
+
+  #home .check-work {
+    width: 60%;
+  }
+
+  #home .check-work:hover {
+    color: #d24d57 !important;
+  }
+}
+/*HOME START*/
+
+/*PORTFOLIO-DESC START*/
+#portfolio-desc {
+  border-bottom: 1px solid #f1f1f1;
+  padding: 7.5em 0;
+  background: #f8f8f8;
+  text-align: center;
+}
+
+#portfolio-desc h2 {
+  font-size: 2.5em;
+  color: #3b3838;
+  letter-spacing: 0.25em;
+  font-weight: bold;
+  margin-bottom: 0.625em;
+  text-transform: uppercase;
+}
+
+#portfolio-desc p {
+  font-size: 1.375em;
+  color: #706f6f;
+  line-height: 1.5em;
+  padding: 0 10%;
+}
+
+@media screen and (max-width: 768px) {
+  #portfolio-desc {
+    padding: 5em 0;
+  }
+
+  #portfolio-desc h2 {
+    font-size: 1.5em;
+  }
+
+  #portfolio-desc p {
+    font-size: 1em;
+  }
+}
+/*PORTFOLIO-DESC END*/
+
+/*PORTFOLIO START*/
+#portfolio-content {
+  background: #fff;
+  text-align: center;
+}
+
+.portfolio {
+  margin: 0 auto;
+  z-index: 1;
+  background: #fff;
+  padding: 7.5em 0;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.portfolio .info-container h3 {
+  font-size: 2.7em;
+  text-align: center;
+  font-weight: 500;
+  color: #3b3838;
+  margin-bottom: 0.833em;
+}
+
+.portfolio .info-container hr {
+  background-color: #c5c5c5;
+  width: 20%;
+  height: 0.0625em;
+  border: none;
+  margin-left: 40%;
+  margin-bottom: 1.5625em;
+}
+
+.portfolio .info-container p {
+  font-size: 1.5em;
+  width: 90%;
+  margin-left: 7%;
+  color: #706f6f;
+  text-align: center;
+  line-height: 1.5em;
+}
+
+.portfolio .info-container .view-code {
+  border-color: #d24d57;
+  color: #d24d57;
+  margin: 1.875em 0 3.75em 0;
+  margin-left: 5%;
+  display: inline-block;
+  width: 25%;
+  padding: 1em 0;
+  font-size: 0.875em;
+  transition: all 0.3s ease-in-out;
+}
+
+.portfolio .info-container .view-code:hover {
+  background: #d24d57;
+  color: #fff;
+}
+
+.portfolio .info-container .button:hover {
+  border-bottom: 2px solid #cd3944;
+}
+
+.portfolio figure {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.portfolio img {
+  max-width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  .portfolio {
+    padding: 4em 0;
+  }
+
+  .portfolio .info-container h3 {
+    font-size: 1.5em;
+  }
+
+  .portfolio .info-container p {
+    font-size: 1em;
+    margin-bottom: 0.5em;
+  }
+
+  .portfolio .info-container .view-code {
+    width: 45%;
+    margin: 2em 0.5em;
+    padding: 1em 0;
+    font-size: 0.875em;
+  }
+}
+
+/*PORTFOLIO END*/
+
+/*ABOUT START*/
+#about {
+  background: url(./images/person-using-macbook-pro-on-person-s-lap-1181298.jpg) no-repeat center
+    center/cover;
+  background-color: #d36937;
+  background-blend-mode: multiply;
+  color: #fff;
+  text-align: center;
+  padding: 14.375em 0;
+}
+
+#about h2 {
+  font-size: 2.7em;
+  letter-spacing: 0.25em;
+  font-weight: bold;
+  margin-bottom: 0.625em;
+  text-transform: uppercase;
+}
+
+#about p {
+  font-size: 1.5em;
+  text-align: center;
+  line-height: 1.4em;
+  margin-top: 1em;
+  padding: 0 10%;
+}
+
+@media screen and (max-width: 768px) {
+  #about {
+    padding: 6em 0;
+  }
+
+  #about h2 {
+    font-size: 1.5em;
+    margin-bottom: 2em;
+  }
+
+  #about p {
+    font-size: 1em;
+    padding: 0;
+  }
+}
+/*ABOUT END*/
+
+/*CONTACT START*/
+#contact {
+  color: #fff;
+  text-align: center;
+  padding: 7.5em 0;
+  background: #cd3944;
+}
+
+#contact h2 {
+  font-size: 2.7em;
+  letter-spacing: 0.25em;
+  font-weight: bold;
+  margin-bottom: 0.625em;
+  text-transform: uppercase;
+}
+
+#contact p {
+  font-size: 1.5em;
+  line-height: 1.4em;
+  padding: 0 20%;
+  margin-top: 1em;
+}
+
+#contact #send-mail {
+  width: 20%;
+  position: relative;
+  text-indent: 1.875em;
+  margin: 3em auto 5em auto;
+  border-color: #fff;
+  font-size: 1em;
+  padding: 1.5em 0;
+  transition: all 0.3s ease-in-out;
+}
+
+#contact #send-mail:hover {
+  background: #fff;
+  color: #d24d57;
+}
+
+#contact #send-mail span {
+  margin-right: 1.25em;
+  font-size: 1.625em;
+  position: absolute;
+  width: 3.75em;
+  height: 3.75em;
+  line-height: 2.5em;
+  top: 0;
+  left: 0;
+  text-indent: 0;
+}
+
+.social-links-container {
+  display: table;
+  margin: 0 auto;
+}
+
+.social-links {
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  list-style: none;
+}
+
+.social-links li {
+  float: left;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.social-links a {
+  font-size: 1em;
+  display: block;
+  margin: 0 0.9375em;
+  line-height: 1em;
+  transition: all 0.05s ease-in-out;
+}
+
+.social-links a:hover {
+  border-bottom: 1px solid #fff;
+}
+
+@media screen and (max-width: 1300px) {
+  #contact #send-mail {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  #contact #send-mail {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #contact #send-mail {
+    width: 70%;
+  }
+
+  #contact {
+    padding: 4em 0;
+  }
+
+  #contact h2 {
+    font-size: 1.5em;
+  }
+
+  #contact p {
+    font-size: 1em;
+  }
+}
+/*CONTACT END*/
+
+/*FOOTER START*/
+footer {
+  padding: 2em 0;
+  background: #252525;
+}
+
+#copy {
+  font-size: 0.875em;
+  text-transform: uppercase;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.2);
+  line-height: 1.5em;
+}
+
+#copy a {
+  color: #cd3944;
+  border-bottom: 1px solid transparent;
+  transition: all 0.15s ease-in-out, 1s;
+}
+
+@media screen and (max-width: 768px) {
+  footer {
+    padding: 1em 0;
+  }
+  #copy,
+  #copy span,
+  #copy a {
+    font-size: 0.8em;
+  }
+}
+/*FOOTER END*/

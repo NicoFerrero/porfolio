@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Nicolas Ferrero | Developer</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/45bb931b69.js" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+  </head>
+  <body>
+    <!--NAVIGATION-->
+    <nav id="navigation">
+      <!--<a class="logo links" href="#home">Nicolas Ferrero</a>-->
+      <a href="#home" class="logo"></a>
+      <ul class="nav-links">
+        <li><a onclick="toggleMenuLinks()" class="links" href="#portfolio-desc">portfolio</a></li>
+        <li><a onclick="toggleMenuLinks()" class="links" rel="noopener noreferrer" target="_blank" href="./CURRICULUM VITAE.pdf">resume</a></li>
+        <li><a onclick="toggleMenuLinks()" class="links" href="#about">about</a></li>
+        <li><a onclick="toggleMenuLinks()" class="links" href="#contact">contact</a></li>
+      </ul>
+      <div class="burger" onclick="toggleMenu()">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+
+    <!--HOME-->
+    <section id="home">
+      <div class="container">
+        <h1 id="h1">Nicolas Ferrero</h1>
+        <h2 id="h2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim atque consequuntur eaque
+          maxime doloribus laborum nobis praesentium architecto accusamus sequi.
+        </h2>
+        <a id="a" class="button check-work" href="">check my work</a>
+      </div>
+    </section>
+
+    <!--PORTFOLIO DESCRIPTION-->
+    <section id="portfolio-desc">
+      <div class="containter">
+        <h2>portfolio</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas eligendi tenetur quia
+          soluta molestiae exercitationem delectus itaque sed expedita debitis?
+        </p>
+      </div>
+    </section>
+
+    <!--PORTFOLIO-->
+    <section id="portfolio-content">
+      <article class="portfolio">
+        <div class="container">
+          <div class="info-container">
+            <h3>Poject 1</h3>
+            <hr />
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate voluptas
+              quibusdam minus dolorem iure deleniti incidunt consequuntur placeat beatae ullam.
+            </p>
+            <a class="button view-code" href="">view Code</a>
+            <a class="button view-code" href="">see it online</a>
+          </div>
+          <figure>
+            <img src="./images/chairs-arranged-on-table-305564.jpg" alt="" />
+          </figure>
+        </div>
+      </article>
+
+      <article class="portfolio">
+        <div class="container">
+          <div class="info-container">
+            <h3>Poject 2</h3>
+            <hr />
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate voluptas
+              quibusdam minus dolorem iure deleniti incidunt consequuntur placeat beatae ullam.
+            </p>
+            <a class="button view-code" href="">view Code</a>
+            <a class="button view-code" href="">see it online</a>
+          </div>
+          <figure>
+            <img src="./images/chairs-arranged-on-table-305564.jpg" alt="" />
+          </figure>
+        </div>
+      </article>
+    </section>
+
+    <!--ABOUT-->
+    <section id="about">
+      <div class="container">
+        <h2>about me</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nobis qui nostrum
+          tenetur, cumque sequi a delectus eveniet corrupti nesciunt, optio obcaecati perspiciatis
+          harum maiores earum quo ut eaque! Sit!
+        </p>
+      </div>
+    </section>
+
+    <!--CONTACT -->
+    <section id="contact">
+      <h2>
+        ok. let's create <br />
+        something great
+      </h2>
+      <p>
+        If you like my work and have some cool project to work on, just send me an email or contact
+        me thorough social sites listed below
+      </p>
+      <a id="send-mail" class="button" href="mailto:nicolasalejandroferrereogmail.com"
+        ><span class="far fa-paper-plane"></span>get in touch</a
+      >
+      <div class="social-links-container">
+        <ul class="social-links">
+          <li>
+            <a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/nicol%C3%A1saferrero/">LinkedIn</a>
+          </li>
+          <li><a rel="noopener noreferrer" target="_blank" href="https://github.com/NicoFerrero">GitHub</atarget="_blank"></li>
+        </ul>
+      </div>
+    </section>
+
+    <!--FOOTER -->
+    <footer>
+      <div class="container">
+        <p id="copy">
+          <span>© 2019 <a href="">nicolas ferrero</a> </span>. made in argentina
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
