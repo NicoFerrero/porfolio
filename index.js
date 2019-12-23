@@ -57,6 +57,7 @@ function fadeNav() {
       document.querySelector('.line2').classList.add('on-white-burger');
       document.querySelector('.line3').classList.add('on-white-burger');
       document.querySelector('.logo').style.color = '#4f1d21';
+      document.querySelector('.logo').style.marginTop = 0;
     } else {
       nav.classList.remove('shadowed');
       links.forEach(link => {
