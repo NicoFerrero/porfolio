@@ -307,7 +307,7 @@ a {
   z-index: 1;
   background: #fff;
   padding: 7.5em 0;
-  border-bottom: 1px solid #f1f1f1;
+  border-bottom: 1px solid #f1f1f188;
 }
 
 .portfolio .info-container h3 {
@@ -353,9 +353,26 @@ a {
   color: #fff;
 }
 
-.portfolio .info-container .button:hover {
-  border-bottom: 2px solid #cd3944;
+.portfolio .info-container .see-online {
+  border-color: #da691e;
+  color: #da691e;
+  margin: 1.875em 0 3.75em 0;
+  margin-left: 5%;
+  display: inline-block;
+  width: 25%;
+  padding: 1em 0;
+  font-size: 0.875em;
+  transition: all 0.3s ease-in-out;
 }
+
+.portfolio .info-container .see-online:hover {
+  background: #da691e;
+  color: #fff;
+}
+
+/*.portfolio .info-container .button:hover {
+  border-bottom: 2px solid #cd3944;
+}*/
 
 .portfolio figure {
   max-width: 960px;
